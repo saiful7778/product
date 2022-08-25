@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <script
+      src="https://kit.fontawesome.com/0c708457ce.js"
+      crossorigin="anonymous"
+    ></script>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+
+  </header>
+  <main>
+    <div class="container-section">
+      <div class="container-box">
+        <div class="col-1">
+          <nav>
+            <img src="img/logo.png" alt="">
+          <ul>
+            <li><a href="">man</a></li>
+            <li><a href="">woamn</a></li>
+            <li><a href="">shop</a></li>
+            <li><a href="">snkrs</a></li>
+          </ul>
+          </nav>
+
+          <h2>Nike Air Max</h2>
+          <h3>Lebagh</h3>
+          <p>celebrating the hoops classic in original form as first introduced during UNDERCOVER's Autumn/Winter 2021 presentation. Genuine black leather takes over the upper while a smooth leather Swoosh accents the texture and collar bring a decades-old classic look.</p>
+          <span class="price">$199.99</span>
+          <a class="cart" href=""><span>Add to cart</span></a>
+          <div class="card-section">
+            <div class="card" onclick="doucument.getElementBy">
+              <img src="img/air-max-270-react-shoe-8m45H9-removebg-preview.png" alt="">
+              <h4>NIKE AIR</h4>
+              <h5>ONE TAKE</h5>
+              <span class="card-price">$180</span>
+              <div class="plus">+</div>
+            </div>
+            <div class="card">
+              <img src="img/air-max-270-react-shoe-V2G8wn-removebg-preview.png" alt="">
+              <h4>NIKE AIR</h4>
+              <h5>HURAHE</h5>
+              <span class="card-price">$180</span>
+              <div class="plus">+</div>
+            </div>
+            <div class="card">
+              <img src="img/air-max-2x-shoe-Wh9d6P-removebg-preview.png" alt="">
+              <h4>NIKE AIR</h4>
+              <h5>VOMERO</h5>
+              <span class="card-price">$180</span>
+              <div class="plus">+</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <img class="active" src="img/air-max-270-react-shoe-8m45H9-removebg-preview.png" alt="">
+          <img src="img/air-max-270-react-shoe-V2G8wn-removebg-preview.png" alt="">
+          <img src="img/air-max-2x-shoe-Wh9d6P-removebg-preview.png" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+      const contents = document.querySelectorAll('.col-2 img')
+      const listItems = document.querySelectorAll('.card-section .card')
+
+
+      listItems.forEach((item, idx) => {
+        item.addEventListener('click', () => {
+          hideAllContents()
+
+    contents[idx].classList.add('active')
+  })
+})
+function hideAllContents() {
+  contents.forEach(content => content.classList.remove('active'))
+}
+  </script>
+</body>
+</html>
